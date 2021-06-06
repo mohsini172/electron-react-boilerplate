@@ -1,0 +1,15 @@
+.container {
+  margin-top: 50px;
+  padding: 36px 100px;
+  background: #ffffff70;
+  border-radius: 16px;
+  border: none;
+  color: #00000099;
+  text-align: center;
+}
+
+.videoIcon {
+  color: #40a9ff;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
