@@ -3,6 +3,7 @@ import { Row, Col, Button, Skeleton } from 'antd';
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import styles from './Home.css';
 import avatarImg from '../../../assets/hello.gif';
+import logo from '../../../assets/logo.png';
 import welcomeImg from '../../../assets/welcome.svg';
 import VideoSelector from './VideoSelector';
 import ImageSelector from './ImageSelector';
@@ -38,6 +39,7 @@ export default function Home() {
 
   return (
     <>
+      <img className={styles.logo} src={logo} alt="" />
       <Row className={styles.cover}>
         <Col className={styles.selector} flex={4}>
           {uploading && (
