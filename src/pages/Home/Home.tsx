@@ -93,7 +93,10 @@ export default function Home() {
             className={`${!uploading && imgResult ? '' : 'hidden'}`}
           >
             <Chart />
-            <div style={{ textAlign: 'center' }}>
+            <div
+              className={`${mainEmotion ? '' : 'hidden'}`}
+              style={{ textAlign: 'center' }}
+            >
               <img
                 style={{ width: '250px' }}
                 src={imgResult ? emojis[mainEmotion as string] : ''}

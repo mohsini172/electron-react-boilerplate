@@ -28,7 +28,7 @@ const results: IResultsModel = {
         mainEmotion = key;
       }
     }
-    state.mainEmotion = mainEmotion;
+    state.mainEmotion = max > 0 ? mainEmotion : '';
   }),
   reset: action((state) => {
     state.img = '';
