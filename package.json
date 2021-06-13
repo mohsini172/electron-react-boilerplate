@@ -239,6 +239,7 @@
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^5.0.3",
     "typescript": "^4.0.5",
+    "typescript-plugin-css-modules": "^3.4.0",
     "url-loader": "^4.1.0",
     "webpack": "^5.5.1",
     "webpack-bundle-analyzer": "^4.1.0",
@@ -249,15 +250,20 @@
   },
   "dependencies": {
     "antd": "^4.16.1",
+    "chart.js": "^3.3.2",
+    "easy-peasy": "^5.0.3",
     "electron-debug": "^3.1.0",
     "electron-log": "^4.2.4",
     "electron-updater": "^4.3.4",
     "history": "^5.0.0",
     "react": "^17.0.1",
+    "react-chartjs-2": "^3.0.3",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "regenerator-runtime": "^0.13.5",
-    "source-map-support": "^0.5.19"
+    "socket.io-client": "^4.1.2",
+    "source-map-support": "^0.5.19",
+    "webpack-mild-compile": "^3.3.1"
   },
   "devEngines": {
     "node": ">=10.x",

@@ -33,3 +33,17 @@ body {
   border-radius: 16px;
   border: none;
 }
+
+.ant-upload.ant-upload-drag {
+  height: auto !important;
+}
+
+.hidden {
+  visibility: hidden;
+  position: fixed;
+  z-index: -1;
+}
+
+.ant-btn {
+  transition: none !important;
+}

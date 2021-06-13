@@ -6,10 +6,36 @@
   border: none;
   color: #00000099;
   text-align: center;
+  cursor: pointer;
 }
 
 .videoIcon {
-  color: #40a9ff;
+  color: #40a9ff !important;
   font-size: 42px;
   margin-bottom: 20px;
+}
+
+.video {
+  border-radius: 16px;
+  width: 500px;
+  transform: rotateY(180deg);
+}
+
+.capture {
+  width: 60px !important;
+  height: 60px !important;
+  position: absolute !important;
+  top: 62%;
+  left: calc(50% - 30px);
+  transition: none !important;
+  /* background: linear-gradient(
+    200.96deg,
+    #fedc2a -29.09%,
+    #dd5789 51.77%,
+    #7a2c9e 129.35%
+  ) !important; */
+  background: #dd5789 !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.75) !important;
 }

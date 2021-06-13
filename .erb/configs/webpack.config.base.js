@@ -5,6 +5,7 @@
 import path from 'path';
 import webpack from 'webpack';
 import { dependencies as externals } from '../../src/package.json';
+const WebpackMildCompile = require('webpack-mild-compile').Plugin;
 
 export default {
   externals: [...Object.keys(externals || {})],
@@ -42,5 +43,6 @@ export default {
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'production',
     }),
+    new WebpackMildCompile(),
   ],
 };

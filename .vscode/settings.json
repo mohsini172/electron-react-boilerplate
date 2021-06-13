@@ -26,5 +26,9 @@
     "*.{css,sass,scss}.d.ts": true
   },
   "prettier.useTabs": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "files.exclude": {
+    "**/node_modules": true,
+    "server/venv": true
+  }
 }

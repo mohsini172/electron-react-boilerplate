@@ -4,6 +4,11 @@ module.exports = {
     // A temporary hack related to IDE not resolving correct package.json
     'import/no-extraneous-dependencies': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'no-plusplus': 'off',
+    'promise/always-return': 'off',
+    'import/no-self-import': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'import/prefer-default-export': 'off',
   },
   parserOptions: {
     ecmaVersion: 2020,
