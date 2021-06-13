@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Row, Col, Button } from 'antd';
+import React from 'react';
+import { Row, Col, Button, Skeleton } from 'antd';
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import styles from './Home.css';
 import avatarImg from '../../../assets/hello.gif';
@@ -88,7 +88,7 @@ export default function Home() {
               justifyContent: 'space-evenly',
               height: '100%',
             }}
-            className={`${uploading || imgResult ? '' : 'hidden'}`}
+            className={`${!uploading && imgResult ? '' : 'hidden'}`}
           >
             <Chart />
             <div style={{ textAlign: 'center' }}>
@@ -100,6 +100,14 @@ export default function Home() {
               <h2>{mainEmotion.toUpperCase()}</h2>
             </div>
           </div>
+          {uploading && (
+            <div
+              style={{ padding: '30px', width: '100%', textAlign: 'center' }}
+            >
+              <Skeleton active />
+              <Skeleton.Image />
+            </div>
+          )}
         </Col>
       </Row>
     </>
