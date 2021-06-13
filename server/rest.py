@@ -56,7 +56,6 @@ def upload():
         image = cv2.flip(image, 1)
 
     print(emotions)
-    cv2.imwrite("porcessed image.jpg", image)
 
     retval, buffer = cv2.imencode('.jpg', image)
     imgBase64 = base64.b64encode(buffer)
@@ -64,44 +63,6 @@ def upload():
         "img": 'data:image/jpeg;base64, '+imgBase64.decode('utf-8'),
         "emotions": emotions
     }
-
-
-# @app.post('/base64upload')
-# def upload():
-#     # A file-like object open for reading.
-#     # file = request.body['file']
-#     try:
-#         data = request.json
-#     except:
-#         raise ValueError
-
-#     if data is None:
-#         raise ValueError
-
-#     file = data['file']
-
-#     nparr = np.fromstring(base64.b64decode(file), np.uint8)
-#     print(nparr)
-#     image = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-#     result = detector.detect_emotions(image)
-#     print(result)
-#     bounding_box = result[0]["box"]
-#     emotions = result[0]["emotions"]
-
-#     cv2.rectangle(
-#         image,
-#         (bounding_box[0], bounding_box[1]),
-#         (bounding_box[0] + bounding_box[2], bounding_box[1] + bounding_box[3]),
-#         (0, 155, 255),
-#         2,
-#     )
-#     print(emotions)
-#     # cv2.imshow('', image)
-#     cv2.imwrite("porcessed image.jpg", image)
-
-#     retval, buffer = cv2.imencode('.jpg', image)
-#     imgBase64 = base64.b64encode(buffer)
-#     return imgBase64
 
 
 if __name__ == "__main__":
