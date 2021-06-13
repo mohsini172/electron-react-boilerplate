@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState } from 'react';
 import { VideoCameraOutlined, CameraOutlined } from '@ant-design/icons';
-import { Button } from 'antd';
+import { Button, message } from 'antd';
 import styles from './VideoSelector.css';
 import { useStoreActions, useStoreState } from '../../store/upload';
 
@@ -70,13 +70,14 @@ export default function VideoSelector() {
       .then((res) => {
         setEmotions(res.emotions);
         setImg(res.img);
-        console.log(res);
       })
       .finally(() => {
         setUploading(false);
       })
       .catch((res) => {
-        console.log(res);
+        message.error(
+          'Unable to upload image. Please check if server is running :('
+        );
       });
 
     videoRef.pause();
