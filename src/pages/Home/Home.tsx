@@ -2,7 +2,6 @@ import React from 'react';
 import { Row, Col, Button, Skeleton } from 'antd';
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import styles from './Home.css';
-import avatarImg from '../../../assets/hello.gif';
 import logo from '../../../assets/logo.png';
 import welcomeImg from '../../../assets/welcome.svg';
 import VideoSelector from './VideoSelector';
@@ -10,6 +9,7 @@ import ImageSelector from './ImageSelector';
 import { Loading } from '../../shared/loading';
 import { useStoreActions, useStoreState } from '../../store/upload';
 import Chart from './Chart';
+import Hello from '../../shared/Hello';
 
 import angry from '../../../assets/angry.svg';
 import disgust from '../../../assets/disgust.svg';
@@ -70,12 +70,7 @@ export default function Home() {
           </div>
         </Col>
         <Col className={`${styles.sidebar} bg-white`} flex={1}>
-          <img
-            className={`${uploading || imgResult ? 'hidden' : ''}`}
-            width="200px"
-            alt="avatarImg"
-            src={avatarImg}
-          />
+          <Hello className={`${uploading || imgResult ? 'hidden' : ''}`} />
           <img
             className={`${uploading || imgResult ? 'hidden' : ''}`}
             width="300px"

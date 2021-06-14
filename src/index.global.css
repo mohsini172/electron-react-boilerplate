@@ -47,3 +47,43 @@ body {
 .ant-btn {
   transition: none !important;
 }
+
+#helloSvg {
+  transform: rotateY(180deg);
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#helloSvg #forearm {
+  transform-origin: bottom left;
+  transform-box: fill-box;
+  animation: handWave 1s infinite;
+}
+
+@keyframes handWave {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-22deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#helloSvg #bulb {
+  animation: blinkingBulb 300ms infinite;
+}
+
+@keyframes blinkingBulb {
+  0% {
+    fill: red;
+  }
+  50% {
+    fill: yellow;
+  }
+  100% {
+    fill: red;
+  }
+}
